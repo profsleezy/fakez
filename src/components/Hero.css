@@ -1,0 +1,23 @@
+/* src/components/Hero.css */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f4f4f4;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 1.5rem;
+    color: #666;
+    max-width: 600px;
+  }
+  
