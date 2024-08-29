@@ -19,5 +19,11 @@
     font-size: 1.5rem;
     color: #666;
     max-width: 600px;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
   }
   
