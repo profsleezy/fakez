@@ -1,15 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import ReactDOM from 'react-dom/client';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { sendToVercelAnalytics } from './vitals';
+import { NextUIProvider } from '@nextui-org/react';
 
-ReactDOM.render(
-  <React.StrictMode>
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <NextUIProvider>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </NextUIProvider>
 );
-
-reportWebVitals(sendToVercelAnalytics);
