@@ -1,0 +1,93 @@
+/* Pricing Section Styles */
+.pricing-section {
+    padding: 4rem 2rem;
+    background-color: #09090B;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .pricing-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .pricing-content h2 {
+    font-family: 'Heavitas', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, #FDE35E, #F3F4F6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .pricing-content p {
+    font-family: 'Geist', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #A8A29E;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .pricing-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+  }
+  
+  .pricing-card {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+    border: 1px solid #333; /* Subtle border */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pricing-card h3 {
+    font-family: 'Heavitas', sans-serif;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+  }
+  
+  .pricing-card .price {
+    font-size: 2rem;
+    margin: 1rem 0;
+    font-family: 'Heavitas', sans-serif;
+  }
+  
+  .pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Geist', sans-serif;
+  }
+  
+  .pricing-card ul li {
+    margin: 0.5rem 0;
+  }
+  
+  .btn {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Geist', sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .btn:hover {
+    background-color: #FF8C00;
+  }
+  
