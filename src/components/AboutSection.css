@@ -1,102 +1,98 @@
 /* About Section Styles */
 .about-section {
-    padding: 2rem 2rem;
-    background-color: #09090B;
-    color: #ffffff;
-    position: relative;
-    min-height: 50vh;
-  }
-  
-  .about-content {
-    max-width: 800px; /* Increased to accommodate cards */
-    margin: 0 auto;
-    text-align: left;
-    position: relative;
-    z-index: 1;
-  }
-  
-  /* Circle gradient behind the text */
-  .about-content::before {
-    content: "";
-    position: absolute;
-    top: 0%;
-    left: -20%;
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, rgba(255, 165, 0, 0.2) 0%, rgba(255, 165, 0, 0) 70%);
-    z-index: 0;
-    transform: translateY(-50%);
-    pointer-events: none;
-  }
-  
-  .about-content h2 {
-    font-family: 'Heavitas', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(45deg, #FDE35E, #F3F4F6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .about-content p {
-    font-family: 'Geist', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #A8A29E;
-    margin-top: 1rem;
-    max-width: 650px;
-  }
-  
-  .about-section .divider {
-  }
-  
-  /* Card Container */
-  .card-container {
-    display: flex;
-    justify-content: space-between; /* Space between cards */
-    gap: 1.5rem; /* Space between the two cards */
-    margin-top: 2rem; /* Space above the cards */
-  }
-  
-  /* About Cards */
-  .about-card {
-    flex: 1;
-    background-color: #151515;
-    border-radius: 10px;
-    padding: 1.5rem;
-    color: white;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #FDE35E; /* Solid border color */
-    border-radius: 16px;
-  }
-  
-  .card-icon {
-    position: absolute;
-    top: 1rem; /* Adjust top positioning */
-    left: 1rem; /* Adjust left positioning */
-    width: 30px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-    fill: #FDE35E; /* Icon color */
-  }
-  
-  /* To make sure the icons are above the card's content */
-  .about-card .card-icon {
-    z-index: 2; /* Ensure icons are above other content */
-  }
+  padding: 2rem 2rem;
+  background-color: #09090B;
+  color: #ffffff;
+  position: relative;
+  min-height: 50vh;
+}
 
-  .about-card h3 {
-    font-family: 'Heavitas', sans-serif;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-  
-  .about-card p {
-    font-family: 'Geist', sans-serif;
-    font-size: 0.8rem;
-    line-height: 1.5;
-    color: #A8A29E;
-  }
-  
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+/* Circle gradient behind the text */
+.about-content::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: -20%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.2) 0%, rgba(255, 165, 0, 0) 70%);
+  z-index: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.about-content h2 {
+  font-family: 'Heavitas', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #FDE35E, #F3F4F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-content p {
+  font-family: 'Geist', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #A8A29E;
+  margin-top: 1rem;
+  max-width: 650px;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  justify-content: space-between; 
+  gap: 1.5rem; 
+  margin-top: 2rem; 
+}
+
+/* About Cards */
+.about-card {
+  flex: 1;
+  background-color: #151515;
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: white;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #FDE35E;
+  border-radius: 16px;
+}
+
+/* Card Icon */
+.card-icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 30px;
+  height: auto;
+  fill: #FDE35E;
+}
+
+.about-card .card-icon {
+  z-index: 2;
+}
+
+.about-card h3 {
+  font-family: 'Heavitas', sans-serif;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.about-card p {
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #A8A29E;
+}

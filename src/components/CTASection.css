@@ -1,64 +1,78 @@
 .cta-section {
-    padding: 3rem 2rem;
-    background: linear-gradient(to bottom, #09090B 30%, #FF8C00 100%); /* Shorter gradient background */
-    color: #ffffff;
-    text-align: center;
-    position: relative;
-    overflow: hidden; /* Ensure glow effect doesn't overflow */
+  padding: 3rem 2rem;
+  background: linear-gradient(to bottom, #09090B 30%, #FF8C00 100%); /* Shorter gradient background */
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Ensure glow effect doesn't overflow */
+  background-size: 200% 200%; /* Ensure the gradient covers the element */
+  animation: gradientAnimation 6s ease infinite; /* Apply the gradient animation */
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1; /* Ensure content is above the glow */
+}
+
+.cta-heading {
+  font-family: 'Heavitas', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #FDE35E, #F3F4F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 4px rgba(255, 223, 0, 0.3); /* Softer glowing text shadow */
+}
+
+.cta-description {
+  font-family: 'Geist', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #A8A29E;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  color: #111; /* Dark text color */
+  background: #FDE35E; /* Soft bright background for the button */
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(255, 223, 0, 0.2); /* Subtle shadow for the button */
+}
+
+.cta-button:hover {
+  background: #F3F4F6;
+  color: #111;
+  box-shadow: 0 4px 8px rgba(255, 223, 0, 0.3); /* Slightly more pronounced shadow on hover */
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Shortened gradient overlay height */
+  background: linear-gradient(to bottom, rgba(9, 9, 11, 0.3), rgba(255, 140, 0, 0.3)); /* Blurry gradient overlay */
+  filter: blur(20px); /* Softer blur effect */
+  z-index: 0; /* Place behind content */
+  opacity: 0.4; /* Lower opacity for a more subtle glow */
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
   }
-  
-  .cta-content {
-    position: relative;
-    z-index: 1; /* Ensure content is above the glow */
+  50% {
+    background-position: 60% 60%;
   }
-  
-  .cta-heading {
-    font-family: 'Heavitas', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(45deg, #FDE35E, #F3F4F6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 4px rgba(255, 223, 0, 0.3); /* Softer glowing text shadow */
+  100% {
+    background-position: 0% 0%;
   }
-  
-  .cta-description {
-    font-family: 'Geist', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #A8A29E;
-    margin-bottom: 1.5rem;
-  }
-  
-  .cta-button {
-    font-family: 'Geist', sans-serif;
-    font-size: 1rem;
-    color: #111; /* Dark text color */
-    background: #FDE35E; /* Soft bright background for the button */
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    text-decoration: none;
-    display: inline-block;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 6px rgba(255, 223, 0, 0.2); /* Subtle shadow for the button */
-  }
-  
-  .cta-button:hover {
-    background: #F3F4F6;
-    color: #111;
-    box-shadow: 0 4px 8px rgba(255, 223, 0, 0.3); /* Slightly more pronounced shadow on hover */
-  }
-  
-  .cta-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%; /* Shortened gradient overlay height */
-    background: linear-gradient(to bottom, rgba(9, 9, 11, 0.3), rgba(255, 140, 0, 0.3)); /* Blurry gradient overlay */
-    filter: blur(20px); /* Softer blur effect */
-    z-index: 0; /* Place behind content */
-    opacity: 0.4; /* Lower opacity for a more subtle glow */
-  }
-  
+}
