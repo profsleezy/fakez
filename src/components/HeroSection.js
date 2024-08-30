@@ -1,11 +1,21 @@
 import React from 'react';
+import { Button, Chip } from '@mui/joy';
 import './HeroSection.css';
 
 const HeroSection = () => {
   return (
     <header className="hero-section">
+      <Chip
+        variant="outlined"
+        className="hero-chip"
+      >
+      Introducing Fakez
+      </Chip>
       <h1>fakez.cc</h1>
-      <p>Welcome to fakez.cc, your go-to platform for all things fake but fun!</p>
+      <p>Enhance your Discord experience with our innovative bot, Fakez, designed to create stunningly realistic fake fansigns. Leveraging cutting-edge AI technology, Fakez expertly crafts authentic-looking text and seamlessly integrates it onto high-quality images, elevating your digital interactions with a touch of creativity and flair. - ChatGPT</p>
+      <Button variant="solid" color="primary" className="neon-button">
+        Sign Up
+      </Button>
     </header>
   );
 };
