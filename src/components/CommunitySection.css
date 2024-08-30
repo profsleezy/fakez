@@ -14,39 +14,48 @@
     -webkit-text-fill-color: transparent;
   }
   
-  .community-container {
+  .platform-pillars {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
     justify-content: center;
+    gap: 2rem;
   }
   
-  .community-card {
-    background-color: #1c1c1c;
-    border-radius: 10px;
-    padding: 1.5rem;
-    color: white;
-    text-align: center;
+  .platform-pillar {
+    background: linear-gradient(135deg, #1c1c1c, #2c2c2c);
+    border-radius: 12px;
+    padding: 2rem;
     width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .community-icon {
+  .platform-pillar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .pillar-icon {
     margin-bottom: 1rem;
+    border-radius: 50%;
+    padding: 1rem;
+    display: inline-block;
   }
   
   .icon {
-    height: 40px;
+    height: 50px;
     width: auto;
   }
   
-  .community-card h3 {
+  .platform-pillar h3 {
     font-family: 'Heavitas', sans-serif;
     margin-bottom: 1rem;
     font-size: 1.5rem;
   }
   
-  .community-card p {
+  .platform-pillar p {
     font-family: 'Geist', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
@@ -54,7 +63,7 @@
     margin-bottom: 1rem;
   }
   
-  .community-link {
+  .pillar-link {
     font-family: 'Geist', sans-serif;
     font-size: 1rem;
     color: #FDE35E;
@@ -62,7 +71,7 @@
     transition: color 0.3s ease;
   }
   
-  .community-link:hover {
+  .pillar-link:hover {
     color: #F3F4F6;
   }
   
