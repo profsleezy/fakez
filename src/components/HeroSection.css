@@ -56,14 +56,20 @@
 
 .hero-section h1 {
   font-family: 'Akira', sans-serif; /* Apply the custom font */
-  font-size: 7.5rem;
+  font-size: 4rem;
   margin-bottom: 1rem; /* Reduced margin to move content up */
-  background: linear-gradient(45deg, #F3F4F6, #FDE35E); /* Lemonade to white gradient */
+  background: white; /* Lemonade to white gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; /* Ensure text color is visible only through gradient */
   position: relative;
   z-index: 1; /* Ensure text is above the gradient */
   margin-top: -1rem; /* Adjust this value to move the header up closer to the chip */
+  max-width: 1200px;
+}
+.hero-section .gradient-text {
+  background: linear-gradient(45deg, #F3F4F6, #FDE35E); /* Gradient color for 'too real' */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-section p {
