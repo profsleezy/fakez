@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { Button } from '@nextui-org/react';
+import './Hero.css'; // Tailwind CSS file (if any)
 
 const Hero = () => {
   return (
