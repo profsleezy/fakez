@@ -1,0 +1,54 @@
+/* Header Styles */
+.header {
+    padding: 1rem 0; /* Top and bottom padding for spacing */
+    width: 100%;
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensure it stays above other content */
+    margin-top: 10px;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: center; /* Center the nav content */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width */
+    padding: 0 1rem; /* Add padding for spacing */
+  }
+  
+  .logo-container {
+    position: absolute; /* Absolute positioning to align the logo */
+    left: 8rem; /* Adjust spacing from the left */
+    margin-top: 10px;
+  }
+  
+  .logo {
+    height: 35px; /* Adjust logo height */
+    width: auto; /* Maintain aspect ratio */
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2.2rem; /* Spacing between nav items */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .nav-item {
+    font-family: 'Geist', sans-serif;
+    font-size: 0.9rem; /* Adjust font size */
+  }
+  
+  .nav-item a {
+    opacity: 80%;
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .nav-item a:hover {
+    color: #FDE35E; /* Change text color on hover */
+  }
+  
