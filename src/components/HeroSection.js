@@ -4,7 +4,7 @@ import './HeroSection.css';
 
 const HeroSection = () => {
   return (
-    <header className="hero-section">
+    <header className="hero-section" id='hero'>
       <Chip
         variant="outlined"
         className="hero-chip"
