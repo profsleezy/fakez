@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+</head>
+<body>
+  <h1>Welcome, <%= user.first_name %> <%= user.last_name %> (@<%= user.username %>)</h1>
+  <img src="<%= user.photo_url %>" alt="Profile Picture">
+  <br>
+  <a href="/logout/<%= id %>">Logout</a>
+</body>
+</html>

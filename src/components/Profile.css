@@ -1,0 +1,128 @@
+/* General styles for dark mode */
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Profile container styles */
+  .profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #1f1f1f; /* Dark card background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  /* Header styles with animated gradient background */
+  .profile-header {
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.85), rgba(255, 87, 34, 0.85)); /* Orange gradient */
+    background-size: 400% 400%; /* Allows for smooth animation */
+    animation: gradientAnimation 15s ease infinite; /* Animation properties */
+    padding: 2rem;
+    color: #121212; /* Dark text color to contrast with orange */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Gradient animation */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Dashboard title styles */
+  .dashboard-title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Profile section containing the profile picture and log out button */
+  .profile-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Log out button styles */
+  .log-out-button {
+    background-color: white; /* White button */
+    color: black; /* Black text */
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .log-out-button:hover {
+    background-color: #e65100; /* Darker orange on hover */
+    color: white;
+  }
+  
+  /* Profile image styles */
+  .profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff; /* White border to make it stand out */
+  }
+  
+  /* Content styles */
+  .profile-content {
+    padding: 2rem;
+    background-color: #1f1f1f; /* Dark card background */
+    border-top: 2px solid #ff9800; /* Orange border */
+  }
+  
+  /* Credits card styles */
+  .credits-card {
+    background-color: #2c2c2c; /* Slightly lighter dark background for card */
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .credits-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Credits box styles */
+  .credits-box {
+    background-color: #fbc02d; /* Yellow background */
+    color: #121212; /* Dark text color */
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+  }
+  
+  /* Buy More Credits button styles */
+  .buy-more-button {
+    background-color: white; /* White button */
+    color: black; /* Black text */
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buy-more-button:hover {
+    background-color: #e65100; /* Darker orange on hover */
+    color: white;
+  }
+  

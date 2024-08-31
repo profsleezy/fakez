@@ -30,6 +30,13 @@
   font-weight: normal;
   font-style: normal;
 }
+
+#telegram-login-container {
+  margin-top: 1rem; /* Adjusts the spacing above the widget */
+  z-index: 1; /* Ensures it stays above background elements */
+  position: relative;
+}
+
 .hero-section {
   text-align: center;
   display: flex;
