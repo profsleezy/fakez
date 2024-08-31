@@ -1,128 +1,151 @@
 /* General styles for dark mode */
 body {
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text color */
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Profile container styles */
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #1f1f1f; /* Dark card background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Header styles with animated gradient background */
+.profile-header {
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.85), rgba(255, 87, 34, 0.85)); /* Orange gradient */
+  background-size: 400% 400%; /* Allows for smooth animation */
+  animation: gradientAnimation 15s ease infinite; /* Animation properties */
+  padding: 2rem;
+  color: #121212; /* Dark text color to contrast with orange */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  /* Profile container styles */
-  .profile-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #1f1f1f; /* Dark card background */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+  50% {
+    background-position: 100% 50%;
   }
-  
-  /* Header styles with animated gradient background */
-  .profile-header {
-    background: linear-gradient(135deg, rgba(255, 152, 0, 0.85), rgba(255, 87, 34, 0.85)); /* Orange gradient */
-    background-size: 400% 400%; /* Allows for smooth animation */
-    animation: gradientAnimation 15s ease infinite; /* Animation properties */
-    padding: 2rem;
-    color: #121212; /* Dark text color to contrast with orange */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  100% {
+    background-position: 0% 50%;
   }
-  
-  /* Gradient animation */
-  @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  /* Dashboard title styles */
-  .dashboard-title {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  /* Profile section containing the profile picture and log out button */
-  .profile-section {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Log out button styles */
-  .log-out-button {
-    background-color: white; /* White button */
-    color: black; /* Black text */
-    border: 1px solid white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-right: 1rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .log-out-button:hover {
-    background-color: #e65100; /* Darker orange on hover */
-    color: white;
-  }
-  
-  /* Profile image styles */
-  .profile-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #fff; /* White border to make it stand out */
-  }
-  
-  /* Content styles */
-  .profile-content {
-    padding: 2rem;
-    background-color: #1f1f1f; /* Dark card background */
-    border-top: 2px solid #ff9800; /* Orange border */
-  }
-  
-  /* Credits card styles */
-  .credits-card {
-    background-color: #2c2c2c; /* Slightly lighter dark background for card */
-    border-radius: 8px;
-    padding: 1rem;
-    margin-top: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .credits-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Credits box styles */
-  .credits-box {
-    background-color: #fbc02d; /* Yellow background */
-    color: #121212; /* Dark text color */
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-  }
-  
-  /* Buy More Credits button styles */
-  .buy-more-button {
-    background-color: white; /* White button */
-    color: black; /* Black text */
-    border: 1px solid white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .buy-more-button:hover {
-    background-color: #e65100; /* Darker orange on hover */
-    color: white;
-  }
-  
+}
+
+/* Dashboard title styles */
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Profile section containing the profile picture and log out button */
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Log out button styles */
+.log-out-button {
+  background-color: white; /* White button */
+  color: black; /* Black text */
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.log-out-button:hover {
+  background-color: #e65100; /* Darker orange on hover */
+  color: white;
+}
+
+/* Profile image styles */
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff; /* White border to make it stand out */
+}
+
+/* Content styles */
+.profile-content {
+  padding: 2rem;
+  background-color: #1f1f1f; /* Dark card background */
+  border-top: 2px solid #ff9800; /* Orange border */
+}
+
+/* Container for cards */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Box card for Credits Balance */
+.credits-box-card {
+  background-color: #2c2c2c; /* Dark background */
+  color: #fbc02d; /* Yellow text */
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 350px;
+  height: 350px; /* Make it square */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.credits-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.credits-amount {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Rectangular card for Buy More Credits button */
+.buy-more-card {
+  background-color: #2c2c2c; /* Dark background */
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 350px; /* Match height with the credits box card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Buy More Credits button styles */
+.buy-more-button {
+  background-color: white; /* White button */
+  color: black; /* Black text */
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-more-button:hover {
+  background-color: #e65100; /* Darker orange on hover */
+  color: white;
+}

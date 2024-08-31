@@ -27,9 +27,12 @@ const Profile = () => {
         </div>
       </div>
       <div className="profile-content">
-        <div className="credits-card">
-          <div className="credits-info">
-            <div className="credits-box">Credits: 50</div>
+        <div className="card-container">
+          <div className="credits-box-card">
+            <div className="credits-title">Credits Balance</div>
+            <div className="credits-amount">50</div>
+          </div>
+          <div className="buy-more-card">
             <button className="buy-more-button">Buy More Credits</button>
           </div>
         </div>
