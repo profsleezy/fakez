@@ -6,6 +6,12 @@
 }
 
 @font-face {
+  font-family: 'Inter'; /* Choose a name for your font */
+  src: url('./fonts/inter.ttf') format('truetype'); /* Path to your font file */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Nexa'; /* Choose a name for your font */
   src: url('./fonts/Nexa-ExtraLight.ttf') format('truetype'); /* Path to your font file */
   font-weight: normal;
