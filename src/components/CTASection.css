@@ -15,7 +15,7 @@
 }
 
 .cta-heading {
-  font-family: 'Heavitas', sans-serif;
+  font-family: 'Akira', sans-serif;
   font-size: 2rem;
   margin-bottom: 1rem;
   background: linear-gradient(45deg, #FDE35E, #F3F4F6);
@@ -25,7 +25,7 @@
 }
 
 .cta-description {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   line-height: 1.6;
   color: #A8A29E;
@@ -33,7 +33,7 @@
 }
 
 .cta-button {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   color: #111; /* Dark text color */
   background: #FDE35E; /* Soft bright background for the button */

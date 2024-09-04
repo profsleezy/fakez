@@ -1,247 +1,97 @@
-body {
-  background-color: #000; /* Inky black background */
-  color: #fff; /* White text for high contrast */
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
+/* Header Styles */
+.header {
+  padding: 0.5rem 1rem; /* Reduced top and bottom padding for a smaller height */
+  margin-top: 10px;
+  border-radius: 50px; /* Rounded corners */
+  width: 45%;
+  position: fixed; /* Fixed position to stay at the top */
+  top: 0;
+  left: 28%;
+  z-index: 10; /* Ensure it stays above other content */
+  background: rgba(9, 9, 11, 0.4); /* Semi-transparent background for glass effect */
+  backdrop-filter: blur(10px); /* Glass-like blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for a subtle edge */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for floating effect */
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, border 0.3s ease; /* Smooth transition for all properties */
 }
 
-.profile-dashboard {
+.header.scrolled {
+  background: rgba(9, 9, 11, 0.6); /* Slightly more opaque background when scrolled */
+  backdrop-filter: blur(12px); /* Slightly stronger blur when scrolled */
+}
+
+.nav {
   display: flex;
-  height: 100vh;
+  justify-content: center; /* Center the nav content */
+  align-items: center; /* Center items vertically */
+  width: 0%; /* Full width */
+  padding: 0 1rem; /* Add padding for spacing */
+  position: relative;
+  left: 380px;
 }
 
-.side-nav {
-  width: 250px; /* Ensure the sidebar is wide enough for the text */
-  background-color: #000; /* Slightly lighter black for the sidebar */
+.logo-container {
+  position: absolute; /* Absolute positioning to align the logo */
+  left: -24rem; /* Adjust spacing from the left */
+  margin-top: 7px;
+}
+
+.logo {
+  height: 38px; /* Adjust logo height for a smaller header */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.nav-list {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  padding-top: 20px;
-  box-sizing: border-box;
-  border-right: 1px solid rgb(102, 102, 102);
-  padding-right: 10px;
-  padding-left: 10px;
-}
-.divider {
-  height: 1px;
-  background-color: rgb(102, 102, 102); /* Color for the divider */
-  margin: 10px 0; /* Space around the divider */
+  gap: 2.2rem; /* Spacing between nav items */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
 }
 
-.navitem {
-  display: flex;
-  align-items: center; /* Align icon and text horizontally */
-  padding-left: 30px; /* Ensure items are not touching the sidebar edge */
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-.nav-item0 {
-  display: flex;
-  align-items: center; /* Align icon and text horizontally */
-  padding-left: 30px; /* Ensure items are not touching the sidebar edge */
-  margin-bottom: -15px;
-  cursor: pointer;
-}
-.nav-item1 {
-  display: flex;
-  align-items: center; /* Align icon and text horizontally */
-  padding-left: 30px; /* Ensure items are not touching the sidebar edge */
-  margin-bottom: 10px;
-  cursor: pointer;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  background-color: #2e2e2e;
-  border-radius: 10px;
+.nav-item {
+  position: relative;
+  left: -20px;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.9rem; /* Adjust font size */
 }
 
-
-.image {
-  width: 200px;
-  height: auto;
-  margin-left: -30px;
-  margin-top: 15px;
-  margin-bottom: 10px;
+.nav-item a {
+  opacity: 80%;
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.nav-item2 {
-  display: flex;
-  align-items: center; /* Align icon and text horizontally */
-  padding-left: 30px; /* Ensure items are not touching the sidebar edge */
-  margin-bottom: 15px;
-  cursor: pointer;
-  margin-top: 330px;
-}
-.nav-item2 svg {
-  width: 30px;
-  height: 30px;
-  margin-left: 30px;
-  color: grey; 
+.nav-item a:hover {
+  color: #FDE35E; /* Change text color on hover */
 }
 
-.nav-item2 span {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  color: #fff;
-}
-.navitem svg {
-  width: 30px;
-  height: 30px;
-  margin-right: 13px; /* Space between the icon and the text */
+.navitem2 {
+  position: relative;
+  left: -20px;
+  margin-right: 25px;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.9rem; /* Adjust font size */
 }
 
-.navitem span {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  color: #fff;
+.navitem2 a {
+  opacity: 80%;
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.nav-item1 svg {
-  width: 30px;
-  height: 30px;
-  margin-right: 13px; /* Space between the icon and the text */
+.navitem2 a:hover {
+  color: #FDE35E; /* Change text color on hover */
 }
 
-.nav-item1 span {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  color: #fff;
+.login {
+  position: relative;
+  top: -5px;
 }
 
-.content-area {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 20px; /* Add padding around the content area */
-  box-sizing: border-box;
-}
-
-.rounded-container {
-  background-color: #000000; /* Slightly lighter black for contrast */
-  border-radius: 15px; /* Rounded corners */
-  padding: 20px; /* Space inside the container */
-  height: 2080px;
-  border: 1px solid #555; /* Border for definition */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
-}
-
-.chips {
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  border: #d78800;
-}
-.chip {
-  background-color: #FBAF43; /* Slightly lighter black for contrast */
-  border-radius: 10px; /* Rounded corners */
-  padding: 10px; /* Space inside the container */
-  height: 15px;
-  width: 90px;
-  margin-right: 10px;
-  border: 1px solid #000000; /* Border for definition */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
-}
-
-.chip svg{
-  margin-left: -85%;
-  margin-right: 2%;
-  margin-top: -3%;
-}
-.chip p{
-  color: #414141;
-  margin-top: -25%;
-  margin-left: 20%;
-}
-
-.chip2 {
-  background-color: #000000; /* Slightly lighter black for contrast */
-  border-radius: 10px; /* Rounded corners */
-  padding: 10px; /* Space inside the container */
-  height: 15px;
-  width: 80px;
-  border: 1px solid #555; /* Border for definition */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
-}
-
-.chip2 p{
-  margin-top: -3%;
-}
-.chip3 {
-  position: absolute;
-  background-color: #000000; /* Slightly lighter black for contrast */
-  border-radius: 10000px; /* Rounded corners */
-  padding: 2px; /* Space inside the container */
-  height: 19px;
-  width: 60px;
-  border: 1px solid #555; /* Border for definition */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
-  right: 35px;
-  top: 100px;
-}
-.chip3 p{
-  font-size: 15px;
-  margin-top: 0%;
-}
-.chatbox {
-  position: absolute;
-  width: 77%;
-  bottom: 5%;
-}
-.chatbox:hover {
-  color:#fff;
-}
-.button {
-  display: flex;
-  background-color: #000000;
-  color: #fff;
-  border: 1px solid #555;
-  position: absolute;
-  top: 95px;
-  right: 7px;
-  border-radius: 15px;
-  width: 100px;
-  text-align: center;
-}
-
-.button p {
-  margin-left: 8px;
-}
-
-.button:hover {
-  display: flex;
-  background-color: #d78800;
-  color: #fff;
-  border: 1px solid #ffffff;
-  position: absolute;
-  top: 95px;
-  right: 7px;
-  border-radius: 15px;
-  width: 100px;
-  text-align: center;
-}
-
-.profile-header {
-  font-size: 10px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  margin-left: 1px;
-  border-bottom: 1px solid #555;
-}
-
-.profile-header h1{
-  margin-bottom: 25px;
-}
-
-.profile-image {
-  width: 43px;
-  height: 43px;
-  border-radius: 50%;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-}
-
-.switches {
-  position: absolute;
-  display: flex;
-  bottom: 28%;
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
 }

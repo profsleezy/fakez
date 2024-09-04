@@ -6,7 +6,7 @@
   }
   
   .community-title {
-    font-family: 'Heavitas', sans-serif;
+    font-family: 'Akira', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 2rem;
     background: linear-gradient(45deg, #FDE35E, #F3F4F6);
@@ -50,13 +50,13 @@
   }
   
   .platform-pillar h3 {
-    font-family: 'Heavitas', sans-serif;
+    font-family: 'Akira', sans-serif;
     margin-bottom: 1rem;
     font-size: 1.5rem;
   }
   
   .platform-pillar p {
-    font-family: 'Geist', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
     color: #A8A29E;
@@ -64,7 +64,7 @@
   }
   
   .pillar-link {
-    font-family: 'Geist', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     color: #FDE35E;
     text-decoration: none;
