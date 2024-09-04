@@ -1,9 +1,11 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import './Profile.css';
-import TextField from '@mui/joy/Textarea';
-import { FormControlLabel, Switch, Select, MenuItem } from '@mui/material';
-
+import Typography from '@mui/joy/Typography';
+import Textarea from '@mui/joy/Textarea';
+import Switch from '@mui/joy/Switch';
+import Select from '@mui/joy/Select';
+import Option from '@mui/joy/Option';
 
 const Profile = () => {
   const location = useLocation();
@@ -15,138 +17,112 @@ const Profile = () => {
   }
 
   const decodedPhotoUrl = decodeURIComponent(photo_url);
+  
+
 
   return (
-    <div>
-      {/* Container for profile image and dashboard title */}
-      <div className="profile-header">
-        <img
-          src={decodedPhotoUrl}
-          alt={`${username}'s profile`}
-          className="profile-image"
-        />
-        <div>
-          <h1 className="dashboard-title">{username}'s Dashboard</h1>
-          <div className="welcome-text">
-            <p>Welcome in, {first_name}</p>
-            <img src="/wavinghand.png" alt="Icon" className="png-icon" />
-          </div>
+    <div className="profile-dashboard">
+      <nav className="side-nav">
+        <div className="nav-item0">
+          <img className="image" src="/logomini.png" alt="Logo" />
         </div>
-      </div>
-      
-      <div className="profile-content">
-        <div className="card-container">
-          <div className="credits-box-card">
-            <div className="circle-container">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.5 13.05H24.3C21.6 13.05 19.35 15.3 19.35 18V18.15C19.35 20.85 21.6 23.1 24.3 23.1H27V24C27 25.8 25.65 27.15 24.15 27.15H8.85C7.35 27 6 25.65 6 23.85V12.15C6 10.35 7.35 9 8.85 9H24.15C25.2 9 26.25 9.6 26.7 10.8C27 11.55 27.9 11.85 28.65 11.55C29.4 11.25 29.7 10.35 29.4 9.6C28.5 7.35 26.4 6 24.15 6H8.85C5.7 6 3 8.7 3 12.15V23.85C3 27.3 5.7 30 8.85 30H24.15C27.45 30 30 27.3 30 23.85V22.65C31.35 22.05 32.25 20.7 32.25 19.2V16.8C32.25 14.7 30.6 13.05 28.5 13.05ZM22.35 18.15V17.85C22.35 16.8 23.25 15.9 24.3 15.9H28.5C28.95 15.9 29.25 16.2 29.25 16.65V19.2C29.25 19.65 28.95 19.95 28.5 19.95H24.3C23.25 19.95 22.35 19.2 22.35 18.15Z" fill="grey"/></svg>
-            </div>
-            <div className="credits-title-card">
-              <div className="credits-title">Your Current Credits</div>
-              <div className="credits-number">12</div>
-            </div>
-            <div className="circle-containerdos">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.6269 6.9H25.3881V6C25.3881 5.1 24.791 4.5 23.8955 4.5C23 4.5 22.403 5.1 22.403 6V6.9H16.7313C15.8358 6.9 15.2388 7.5 15.2388 8.4C15.2388 9.3 15.8358 9.9 16.7313 9.9H22.5522V10.8C22.5522 11.7 23.1493 12.3 24.0448 12.3C24.9403 12.3 25.5373 11.7 25.5373 10.8V9.9H27.7761C28.8209 9.9 29.8657 10.8 29.8657 12V14.1H5.98507V12C5.98507 10.8 7.02985 9.9 8.22388 9.9H10.4627V10.8C10.4627 11.7 11.0597 12.3 11.9552 12.3C12.8507 12.3 13.4478 11.7 13.4478 10.8V8.4V6C13.4478 5.1 12.8507 4.5 11.9552 4.5C11.0597 4.5 10.4627 5.1 10.4627 6V6.9H8.22388C5.23881 6.9 3 9.15 3 12V26.4C3 29.25 5.23881 31.5 8.22388 31.5H27.7761C30.6119 31.5 33 29.25 33 26.4V12C32.8507 9.15 30.6119 6.9 27.6269 6.9ZM27.6269 28.5H8.22388C7.02985 28.5 5.98507 27.6 5.98507 26.4V17.1H29.8657V26.4C29.8657 27.6 28.8209 28.5 27.6269 28.5Z" fill="grey"/></svg>
-            </div>
-            <div className="credits-amount-card">
-              <div className='creditsamt'>Your Weekly Credits</div>
-              <div className="credits-amount">9</div>
-            </div>
-          </div>
-          <div className="buy-more-card">
-            <div className='maintext'><h3>Purchase More Credits</h3></div>
-            <div className="buy-more-card-content">
-              <div className="buy-more-card-item">
-                <h3>10 CREDITS</h3>
-                <p>Get 10 more fansign generations for only $5</p>
-                <button className="buy-more-button">Purchase</button>
-              </div>
-              <div className="buy-more-card-item">
-                <h3>20 CREDITS</h3>
-                <p>Get 20 more fansign generations for only $10</p>
-                <button className="buy-more-button">Purchase</button>
-              </div>
-              <div className="buy-more-card-item">
-                <h3>50 CREDITS</h3>
-                <p>Get 50 more fansign generations for only $20</p>
-                <button className="buy-more-button">Purchase</button>
-              </div>
-            </div>
-          </div>
 
+        <div className="divider"></div> {/* Divider added here */}
+
+        <div className="nav-item1">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.7151 3H8.43042C4.66389 3 1.5 6.15 1.5 9.9V24.6C1.5 28.35 4.66389 31.5 8.43042 31.5H27.5644C31.4816 31.5 34.4948 28.35 34.4948 24.6V9.9C34.6455 6.15 31.4816 3 27.7151 3ZM31.6323 24.6C31.6323 26.7 29.8243 28.5 27.7151 28.5H8.43042C6.32116 28.5 4.51323 26.7 4.51323 24.6V12.75H28.9204C29.8243 12.75 30.427 12.15 30.427 11.25C30.427 10.35 29.6737 9.75 28.9204 9.75H4.51323C4.66389 7.65 6.32116 6 8.43042 6H27.5644C29.8243 6 31.6323 7.8 31.6323 9.9V24.6Z" fill="grey"/><path d="M15.984 15.5063C15.5475 14.9352 14.529 14.7925 13.947 15.3635L9.4365 19.2183C9.1455 19.5038 9 19.9321 9 20.3604C9 20.7887 9.1455 21.217 9.4365 21.5025L13.947 25.2145C14.238 25.5 14.529 25.5 14.9655 25.5C15.402 25.5 15.8385 25.3572 16.1295 25.0717C16.7115 24.5006 16.566 23.644 15.984 23.073L12.783 20.3604L15.984 17.6478C16.566 16.934 16.566 16.0774 15.984 15.5063Z" fill="grey"/><path d="M21.9075 15.3686C21.3255 14.7896 20.307 14.9343 19.8705 15.5133C19.2885 16.0922 19.434 16.9606 20.016 17.5396L23.217 20.2895L20.016 23.0395C19.434 23.6184 19.2885 24.4869 19.8705 25.0658C20.1615 25.3553 20.598 25.5 21.0345 25.5C21.3255 25.5 21.762 25.3553 22.053 25.2105L26.5635 21.3027C26.8545 21.0132 27 20.579 27 20.1448C27 19.7106 26.8545 19.2764 26.5635 18.9869L21.9075 15.3686Z" fill="grey"/></svg>          <span>Dashboard</span>
         </div>
-        <div className="additional-card">
-  {/* Add TextField on the left side */}
-  <TextField
-    variant="soft"
-    placeholder="Display text on your fakesign..."
-    sx={{
-      color: 'white',
-      width: '50%',
-      height: '70%',
-      position: 'absolute',
-      top: '60px',
-      border: '1px solid rgba(255, 255, 255, 0.2)',
-      marginRight: '1rem',
-      backgroundColor: '#444444',
-      borderRadius: '8px',
-      '& .MuiInputBase-root': {
-        color: 'white',
-      },
-    }}
-  />
+        <div className="navitem">
+        <svg width="30" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.6 30.1504H5.4C3.3 30.1504 1.5 28.3504 1.5 26.2504V15.3004C1.5 13.2004 3.3 11.4004 5.4 11.4004H24.6C26.7 11.4004 28.5 13.2004 28.5 15.3004V26.2504C28.5 28.3504 26.7 30.1504 24.6 30.1504ZM5.4 14.4004C4.95 14.4004 4.5 14.8504 4.5 15.3004V26.2504C4.5 26.7004 4.95 27.1504 5.4 27.1504H24.6C25.05 27.1504 25.5 26.7004 25.5 26.2504V15.3004C25.5 14.8504 25.05 14.4004 24.6 14.4004H5.4Z" fill="grey"/><path d="M33.0004 24.15C32.1004 24.15 31.5004 23.55 31.5004 22.65V10.05C31.5004 9.45 31.2004 9 30.7504 9H7.65039C6.75039 9 6.15039 8.4 6.15039 7.5C6.15039 6.6 6.75039 6 7.65039 6H30.7504C32.8504 6 34.5004 7.8 34.5004 10.05V22.65C34.5004 23.4 33.9004 24.15 33.0004 24.15Z" fill="grey"/><path d="M14.9992 25.5004C12.2992 25.5004 10.1992 23.4004 10.1992 20.7004C10.1992 18.0004 12.2992 15.9004 14.9992 15.9004C17.6992 15.9004 19.7992 18.0004 19.7992 20.7004C19.7992 23.4004 17.6992 25.5004 14.9992 25.5004ZM14.9992 19.0504C13.9492 19.0504 13.1992 19.8004 13.1992 20.8504C13.1992 21.9004 13.9492 22.5004 14.9992 22.5004C16.0492 22.5004 16.7992 21.7504 16.7992 20.7004C16.7992 19.6504 16.0492 19.0504 14.9992 19.0504Z" fill="grey"/><path d="M7.35078 21.7504C7.93068 21.7504 8.40078 21.2803 8.40078 20.7004C8.40078 20.1205 7.93068 19.6504 7.35078 19.6504C6.77088 19.6504 6.30078 20.1205 6.30078 20.7004C6.30078 21.2803 6.77088 21.7504 7.35078 21.7504Z" fill="grey"/><path d="M22.6496 21.7504C23.2295 21.7504 23.6996 21.2803 23.6996 20.7004C23.6996 20.1205 23.2295 19.6504 22.6496 19.6504C22.0697 19.6504 21.5996 20.1205 21.5996 20.7004C21.5996 21.2803 22.0697 21.7504 22.6496 21.7504Z" fill="grey"/></svg>
+          <span>Purchase</span>
+        </div>
+        <div className="navitem">
+        <svg width="30" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 6C11.3726 6 6 11.3726 6 18C6 24.6274 11.3726 30 18 30C24.6274 30 30 24.6274 30 18C30 11.3726 24.6274 6 18 6ZM3 18C3 9.71573 9.71573 3 18 3C26.2843 3 33 9.71573 33 18C33 26.2843 26.2843 33 18 33C9.71573 33 3 26.2843 3 18ZM18 11.7C16.2784 11.7 15 12.9784 15 14.7C15 15.5284 14.3284 16.2 13.5 16.2C12.6716 16.2 12 15.5284 12 14.7C12 11.3216 14.6216 8.7 18 8.7C21.3784 8.7 24 11.3216 24 14.7C24 17.5582 22.1236 19.8747 19.5 20.5203V20.55C19.5 21.3784 18.8284 22.05 18 22.05C17.1716 22.05 16.5 21.3784 16.5 20.55V19.2C16.5 18.3716 17.1716 17.7 18 17.7C19.7216 17.7 21 16.4216 21 14.7C21 12.9784 19.7216 11.7 18 11.7ZM18 22.95C18.8284 22.95 19.5 23.6216 19.5 24.45V25.8C19.5 26.6284 18.8284 27.3 18 27.3C17.1716 27.3 16.5 26.6284 16.5 25.8V24.45C16.5 23.6216 17.1716 22.95 18 22.95Z" fill="grey"/></svg>
+          <span>Support</span>
+        </div>
+        <div className="navitem">
+        <svg width="30" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 8.7002C5.32843 8.7002 6 9.37177 6 10.2002V27.0002C6 29.4014 8.10625 31.5002 10.8 31.5002H23.85C24.6784 31.5002 25.35 32.1718 25.35 33.0002C25.35 33.8286 24.6784 34.5002 23.85 34.5002H10.8C6.59375 34.5002 3 31.199 3 27.0002V10.2002C3 9.37177 3.67157 8.7002 4.5 8.7002Z" fill="grey"/><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6.28571C9 3.49953 11.369 1.5 13.9759 1.5H21.3621C22.9943 1.5 24.5396 2.04046 25.7229 3.19469L31.2052 8.17549C31.2204 8.18929 31.2353 8.2034 31.2499 8.21781C32.4212 9.37316 33 10.9082 33 12.4286V23.7143C33 26.5005 30.631 28.5 28.0241 28.5H13.9759C11.369 28.5 9 26.5005 9 23.7143V6.28571ZM13.9759 4.5C12.8172 4.5 12 5.35762 12 6.28571V23.7143C12 24.6424 12.8172 25.5 13.9759 25.5H28.0241C29.1828 25.5 30 24.6424 30 23.7143V12.4286C30 11.6721 29.7165 10.9299 29.1627 10.3731L23.6844 5.39594C23.6693 5.38214 23.6543 5.36803 23.6397 5.35361C23.0881 4.80946 22.3259 4.5 21.3621 4.5H13.9759Z" fill="grey"/></svg>
+          <span>Docs</span>
+        </div>
+        <div className="nav-item2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-TelegramFill"><g clip-path="url(#clip0_331_272)"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12zM12.43 8.859c-1.167.485-3.5 1.49-6.998 3.014-.568.226-.866.447-.893.663-.046.366.412.51 1.034.705.085.027.173.054.263.084.613.199 1.437.432 1.865.441.389.008.823-.152 1.302-.48 3.268-2.207 4.955-3.322 5.061-3.346.075-.017.179-.039.249.024.07.062.063.18.056.212-.046.193-1.84 1.862-2.77 2.726-.29.269-.495.46-.537.504-.094.097-.19.19-.282.279-.57.548-.996.96.024 1.632.49.323.882.59 1.273.856.427.291.853.581 1.405.943.14.092.274.187.405.28.497.355.944.673 1.496.623.32-.03.652-.331.82-1.23.397-2.126 1.179-6.73 1.36-8.628a2.111 2.111 0 0 0-.02-.472.506.506 0 0 0-.172-.325c-.143-.117-.365-.142-.465-.14-.451.008-1.143.249-4.476 1.635z"/></g><defs><clipPath id="clip0_331_272"><rect width="24" height="24"/></clipPath></defs></svg>
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-DiscordFill"><path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026c.462-.62.874-1.275 1.226-1.963.021-.04.001-.088-.041-.104a13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028zM8.02 15.278c-1.182 0-2.157-1.069-2.157-2.38 0-1.312.956-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.956 2.38-2.157 2.38zm7.975 0c-1.183 0-2.157-1.069-2.157-2.38 0-1.312.955-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.946 2.38-2.157 2.38z"/></svg></span>
+        </div>
+      </nav>
 
-  {/* Dropdown next to the TextField */}
-  <Select
-    defaultValue=""
-    placeholder="Select an image"
+      <div className="content-area">
+        <div className="profile-header">
+          <img
+            src={decodedPhotoUrl}
+            alt={`${username}'s profile`}
+            className="profile-image"
+          />
+          <h1>{username}'s Dashboard</h1>
+        </div>
+        <div className="rounded-container">
+    <div className='chips'>
+    <div className='chip'>
+    <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.4783 5.24786L17.139 9.39119L13.9169 13.2909L9.24049 19.1093H15.3676C16.1961 19.1093 16.8676 19.7809 16.8676 20.6093V31.2376L23.5846 22.8154L26.649 19.071L28.2695 16.9994H21.9783C21.1499 16.9994 20.4783 16.3278 20.4783 15.4994V5.24786ZM21.7121 1.64944C22.7322 2.01207 23.4783 2.99087 23.4783 4.22755V13.9994H28.8965C30.1013 13.9994 30.904 14.8021 31.2503 15.5923C31.5872 16.3606 31.6256 17.3771 31.0973 18.2378C31.0677 18.2862 31.0353 18.3328 31.0004 18.3774L29.0018 20.9324L28.9812 20.9581L25.9124 24.7081L18.8464 33.5679C18.7796 33.6516 18.7041 33.728 18.6211 33.7956C17.757 34.4995 16.6257 34.6774 15.6585 34.3228C14.6427 33.9504 13.8676 32.9992 13.8676 31.7309V22.1093H8.6032C7.39842 22.1093 6.59573 21.3066 6.24934 20.5165C5.91252 19.7482 5.87406 18.7317 6.40236 17.8709C6.43547 17.817 6.47195 17.7652 6.5116 17.7158L11.5976 11.3878L14.8204 7.48738L18.7812 2.57279C19.5062 1.56506 20.7145 1.29481 21.7121 1.64944Z" fill="#414141"/></svg>
+    <p>fakez-1.0</p>
+    </div>
+    <div className='chip2'>
+    <p>12 credits</p>
+    </div>
+    <div className='chip3'>
+    <p>Result</p>
+    </div>
+    <Select 
+    placeholder="select an image"
+    variant='solid'
     sx={{
-      width: '20%',
-      height: '25%',
-      position: 'absolute',
-      top: '60px',
-      left: '55%',
-      backgroundColor: '#444444',
-      border: '1px solid rgba(255, 255, 255, 0.2)',
-      borderRadius: '8px',
-      color: 'white',
-      '& .MuiSelect-select': {
-        padding: '8px',
-      },
+      'backgroundColor':'black',
+      'borderRadius': '10px',
+      'border': '1px solid #555',
+      'margin-left': '10px',
+      'width': '200px',
+      'height': '10px'
     }}
-    renderValue={(selected) => {
-      if (selected.length === 0) {
-        return <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Pick an image</span>;
-      }
-      return selected;
-    }}
-  >
-    <MenuItem value="" disabled>
-      Pick an image
-    </MenuItem>
-    <MenuItem value="option1">Option 1</MenuItem>
-    <MenuItem value="option2">Option 2</MenuItem>
-    <MenuItem value="option3">Option 3</MenuItem>
+    >
+  <Option>image 1</Option>
+  <Option>image 2</Option>
   </Select>
 
-  {/* Switches below the Select */}
-  <div style={{ position: 'absolute', top: '110px', left: '55%', width: '40%' }}>
-    <FormControlLabel
-      control={<Switch />}
-      label="Black and White"
-      sx={{ color: 'white', marginBottom: '10px' }}
-    />
-    <FormControlLabel
-      control={<Switch />}
-      label="Unblur"
-      sx={{ color: 'white', marginBottom: '10px' }}
-    />
-    <FormControlLabel
-      control={<Switch />}
-      label="Sharpen"
-      sx={{ color: 'white', marginBottom: '10px' }}
-    />
+    </div>
+    <div className='switches'>
+    <Typography color='white' component="label" endDecorator={<Switch sx={{ mr: 1 }} />}>
+    Black & White
+</Typography>
+<Typography color='white'component="label" endDecorator={<Switch sx={{ mr: 1 }} />}>
+    Unblur
+</Typography>
+<Typography 
+color='#A3A3A3'
+component="label" 
+endDecorator={<Switch sx={{ mr: 1 }} />}
+>
+    Sharpen
+</Typography>
+    </div>
+    <div className='chatbox'>
+    <Textarea 
+    name="Plain" 
+    placeholder="Type in here…" 
+    variant="plain"
+    color='grey'
+    sx={{
+      'border': '1px solid #555',
+      'borderRadius': '10px',
+      'max-width': '2000px',
+      'height': '150px',
+      'background': 'black',
+      'color': 'white'
+    }} />
+    <button className='button'>
+    <p>Generate ➨</p>
+    </button>
+
+    </div>
   </div>
-</div>
       </div>
     </div>
   );
