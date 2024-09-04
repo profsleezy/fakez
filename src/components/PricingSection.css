@@ -40,16 +40,40 @@
   
   .pricing-card {
     background-color: #1c1c1c;
-    border-radius: 10px;
+    border-radius: 16px; /* Consistent border radius */
     padding: 2rem;
     color: white;
     text-align: center;
     flex: 1;
     max-width: 300px;
-    border: 1px solid #333; /* Subtle border */
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(253, 227, 94, 0.3);
+    
+    /* Subtle glow shadow towards the bottom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(255, 223, 94, 0.15); /* Glow effect */
   }
+  
+  /* Gradient border effect */
+  .pricing-card::before {
+    content: "";
+    position: absolute;
+    top: -4px; /* Extend border beyond the card */
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 16px; /* Match the border radius of the card */
+    background: linear-gradient(to bottom right, rgba(255, 223, 94, 0.1), rgba(255, 223, 94, 0)); /* Subtle gradient border */
+    z-index: 0; /* Place it behind the content */
+    pointer-events: none; /* Ensure it doesn’t interfere with clicks */
+  }
+  
+  .pricing-card > * {
+    position: relative; /* Ensure child elements are above the pseudo-element */
+    z-index: 1; /* Ensure content is above the gradient border */
+  }
+  
+  
   
   .pricing-card h3 {
     font-family: 'Akira', sans-serif;

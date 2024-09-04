@@ -1,0 +1,97 @@
+/* Header Styles */
+.header {
+  padding: 0.5rem 1rem; /* Reduced top and bottom padding for a smaller height */
+  margin-top: 10px;
+  border-radius: 50px; /* Rounded corners */
+  width: 45%;
+  position: fixed; /* Fixed position to stay at the top */
+  top: 0;
+  left: 28%;
+  z-index: 10; /* Ensure it stays above other content */
+  background: rgba(9, 9, 11, 0.4); /* Semi-transparent background for glass effect */
+  backdrop-filter: blur(10px); /* Glass-like blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for a subtle edge */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for floating effect */
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, border 0.3s ease; /* Smooth transition for all properties */
+}
+
+.header.scrolled {
+  background: rgba(9, 9, 11, 0.6); /* Slightly more opaque background when scrolled */
+  backdrop-filter: blur(12px); /* Slightly stronger blur when scrolled */
+}
+
+.nav {
+  display: flex;
+  justify-content: center; /* Center the nav content */
+  align-items: center; /* Center items vertically */
+  width: 0%; /* Full width */
+  padding: 0 1rem; /* Add padding for spacing */
+  position: relative;
+  left: 380px;
+}
+
+.logo-container {
+  position: absolute; /* Absolute positioning to align the logo */
+  left: -24rem; /* Adjust spacing from the left */
+  margin-top: 7px;
+}
+
+.logo {
+  height: 38px; /* Adjust logo height for a smaller header */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem; /* Spacing between nav items */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+}
+
+.nav-item {
+  position: relative;
+  left: -20px;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.9rem; /* Adjust font size */
+}
+
+.nav-item a {
+  opacity: 80%;
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-item a:hover {
+  color: #FDE35E; /* Change text color on hover */
+}
+
+.navitem2 {
+  position: relative;
+  left: -20px;
+  margin-right: 25px;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.9rem; /* Adjust font size */
+}
+
+.navitem2 a {
+  opacity: 80%;
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navitem2 a:hover {
+  color: #FDE35E; /* Change text color on hover */
+}
+
+.login {
+  position: relative;
+  top: -5px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
