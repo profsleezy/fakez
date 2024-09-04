@@ -1,11 +1,11 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import './Profile.css';
 import Typography from '@mui/joy/Typography';
 import Textarea from '@mui/joy/Textarea';
 import Switch from '@mui/joy/Switch';
 import Select from '@mui/joy/Select';
 import Option from '@mui/joy/Option';
+import './Profile.css';
 
 const Profile = () => {
   const location = useLocation();

@@ -58,8 +58,8 @@
 /* About Cards */
 .about-card {
   flex: 1;
-  background-color: #151515;
-  border-radius: 10px;
+  background-color: #09090B;
+  border-radius: 16px; /* Consistent border radius */
   padding: 1.5rem;
   color: white;
   text-align: left;
@@ -67,8 +67,27 @@
   position: relative;
   overflow: hidden;
   border: 1px solid #FDE35E;
-  border-radius: 16px;
 }
+
+/* Pseudo-element for subtle gradient effect */
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(255, 223, 94, 0.1), rgba(255, 223, 94, 0));
+  border-radius: 16px; /* Match the border radius of the card */
+  z-index: 0; /* Place it behind the content */
+  pointer-events: none; /* Ensure it doesn’t interfere with clicks */
+}
+
+.about-card > * {
+  position: relative; /* Ensure child elements are above the pseudo-element */
+  z-index: 1; /* Ensure content is above the gradient */
+}
+
 
 /* Card Icon */
 .card-icon {
